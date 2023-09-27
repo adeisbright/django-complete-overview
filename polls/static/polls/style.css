@@ -1,0 +1,59 @@
+*,body{
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 3rem;
+}
+ .login-form,
+ form {
+     margin: 0 auto;
+     width: 40%;
+     padding: 2rem
+ }
+
+ button,
+ input,
+ select,
+ textarea {
+     font-family: inherit;
+     font-size: 1.5em;
+ }
+
+ input,
+ textarea,
+ button {
+     box-sizing: border-box;
+     width: 80%;
+     padding: 8px;
+     font-size: 1.1rem;
+     outline: 0;
+     display: block;
+     margin-bottom: 1.5rem;
+     border: 1px solid #eee;
+     border-radius: 5px;
+     -webkit-appearance: none;
+     appearance: none;
+
+ }
+
+ label {
+     margin-right: 10px;
+     font-size: 1.2rem;
+ }
+
+ label:not(.class-name) {
+     display: block;
+     margin-bottom: 1rem;
+     margin-right: 0;
+ }
+
+ #submit {
+     background: rgb(23, 39, 8);
+     color: #fff;
+ }
+
+ h1 {
+     text-align: center;
+ }

@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Working with Django Templating</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+</head>
+<body>
+    <h1>Poll Index Page </h1>
+    {% if is_valid %}
+        <p> Show {{ name }} </p>
+    {% else  %}
+        <p> Variable no dey </p>
+    {% endif %}
+    
+    {% for color in colors %}
+    <li> {{color}} </li>
+    {% endfor %}
+    <h3>Enjoying Django Templating</h3>
+    <div> {{ message|truncatewords:5 }}</div>
+    <p> See my figure</p> 
+    <!-- <img src="{% static 'downtime.png' %}" alt="Figure"> -->
+</body>
+</html>

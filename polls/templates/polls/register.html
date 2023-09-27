@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Authentication: Register </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    <style>
+        .login-form,
+        form {
+            margin: 0 auto;
+            width: 40%;
+            padding: 2rem
+        }
+    
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 1.5em;
+        }
+    
+        input,
+        textarea,
+        button {
+            box-sizing: border-box;
+            width: 80%;
+            padding: 8px;
+            font-size: 1.1rem;
+            outline: 0;
+            display: block;
+            margin-bottom: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            -webkit-appearance: none;
+            appearance: none;
+    
+        }
+    
+        label {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+    
+        label:not(.class-name) {
+            display: block;
+            margin-bottom: 1rem;
+            margin-right: 0;
+        }
+    
+        #submit {
+            background: rgb(23, 39, 8);
+            color: #fff;
+        }
+    
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Signup as a member</h1>
+
+    <form method="post" action="{% url 'polls:poll_users'  %}">
+        {%csrf_token%}
+        <label for="username">Username</label>
+        <input type="text" name="username">
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname">
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <button type="submit" id="submit">Signup</button>
+    </form>
+</body>
+
+</html>

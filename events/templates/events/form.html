@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Working with Django Forms</title>
+</head>
+<body>
+    <form action="{% url 'events:add_events' %}" method="post">
+        
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

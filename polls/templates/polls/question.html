@@ -1,0 +1,14 @@
+{% extends "polls/base.html" %} 
+{% block title %} Questions Page {% endblock %} 
+
+{% block sidebar %} <h2> My Sidebar </h2> {% endblock %} 
+
+{% block content %} 
+    {% if latest_questions|length > 0 %}
+        {% for question in latest_questions %} 
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li> 
+        {% endfor %} 
+    {% else %} 
+        <p>No Question Yet</p> 
+    {% endif %} 
+{% endblock %}

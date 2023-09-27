@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Authentication: Login </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+</head>
+
+<body>
+    
+    <form method="post" action="{% url 'polls:users_authenticate'  %}" class="login-form">
+        {%csrf_token%}
+        <h1>Account Login</h1>
+        <label for="username">Username</label>
+        <input type="text" name="username">
+        <label for="password">Password</label>
+        <input type="password"  name="password">
+        <button type="submit" id="submit">Login</button>
+    </form>
+</body>
+
+</html>
